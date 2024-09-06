@@ -1,0 +1,1443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure the body takes the full viewport height */
+    background-image: url('background.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Keep the background fixed in place */
+    background-position: center; /* Center the background image */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Responsive Background for Small Screens */
+@media (max-width: 768px) {
+    body {
+        background-size: auto; /* Allow the image to scale automatically */
+        background-position: top; /* Adjust the position for smaller screens */
+    }
+}
+
+
+/* Desktop Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgb(39, 39, 39);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover {
+    color: greenyellow;
+}
+
+/* Mobile Styles */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    color: greenyellow;
+    font-size: 25px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding-left: 5%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        flex-direction: column;
+        background: rgb(39, 39, 39);
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+
+    .navbar a {
+        margin: 15px 0;
+        font-size: 18px;
+        text-align: left;
+        width: 100%;
+    }
+
+    .navbar.active {
+        height: 300px; /* Adjust height based on content */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+   
+}
+
+
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 350px 20% 20%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-content {
+    max-width: 600px;
+    text-align: center;
+}
+
+.home-content h3 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3 span {
+    color: greenyellow;
+}
+
+.home-content h1 {
+    color: #fff;
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-content p {
+    color: #fff;
+    font-size: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid greenyellow;
+    border-radius: 50%;
+    font-size: 20px;
+    color: greenyellow;
+    text-decoration: none;
+    transition: .5s;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    margin: 30px 15px 30px 0;
+}
+
+.home-sci a:hover {
+    background: greenyellow;
+    color: black;
+    box-shadow: 0 0 20px greenyellow;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 28px;
+    background: greenyellow;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px greenyellow, 0 0 25px greenyellow;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px greenyellow, 0 0 25px greenyellow, 
+        0 0 50px greenyellow, 0 0 100px greenyellow, 
+        0 0 200px greenyellow;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        display: none;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+
+    .home {
+        padding: 50px 5% 0;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-content h3 {
+        font-size: 24px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+    }
+
+    .home-sci a {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        margin: 20px 10px 20px 0;
+    }
+
+    .btn-box {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+
+.about {
+    padding-bottom: 200px; 
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.about-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px greenyellow,
+                0 0 30px greenyellow,
+                0 0 45px greenyellow,
+                0 0 60px greenyellow;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.about-img img:hover {
+    box-shadow: 0 0 30px greenyellow,
+                0 0 60px greenyellow,
+                0 0 90px greenyellow,
+                0 0 120px greenyellow;
+}
+
+.about-text h2 {
+    color: #fff;
+    font-size: 60px;
+}
+
+.about-text h2 span {
+    color: greenyellow;
+}
+
+.about-text h4 {
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+.about-text p {
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+    margin-right: 100px;
+    text-align: justify;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .about {
+        grid-template-columns: 1fr;
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .about-img img {
+        width: 250px; /* Reduce image size */
+        height: 250px; /* Reduce image size */
+        margin-bottom: 1.5rem; /* Add space below the image */
+    }
+
+    .about-text h2 {
+        font-size: 40px; /* Reduce heading size */
+    }
+
+    .about-text h4 {
+        font-size: 24px; /* Reduce subheading size */
+    }
+
+    .about-text p {
+        font-size: 18px; /* Reduce paragraph font size */
+        margin-right: 0; /* Remove right margin */
+        padding: 15px; /* Adjust padding */
+    }
+}
+
+/* Further adjustments for very small screens (like phones) */
+@media (max-width: 480px) {
+    .about-img img {
+        width: 200px; /* Further reduce image size */
+        height: 200px;
+    }
+
+    .about-text h2 {
+        font-size: 32px; /* Further reduce heading size */
+    }
+
+    .about-text h4 {
+        font-size: 20px; /* Further reduce subheading size */
+    }
+
+    .about-text p {
+        font-size: 16px; /* Further reduce paragraph font size */
+        padding: 10px; /* Adjust padding */
+    }
+}
+
+
+
+#services {
+    margin-top: 5rem;
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 15rem;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 10px;
+}
+
+.sub-title span {
+    color: greenyellow;
+}
+
+.container {
+    padding: 80px;
+    padding-top: 60px;
+}
+
+.services-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+.services-list div {
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 400; /* Adjusted font-weight to a valid value */
+    border-right: 10px solid transparent; /* Adjusted border-right to be solid */
+    border-radius: 20px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px greenyellow, 1px 1px 40px greenyellow;
+    flex: 1 1 259px;
+}
+
+.services-list div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.services-list div p {
+    text-align: justify;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.read {
+    display: inline-block;
+    padding: 12px 28px;
+    background: greenyellow;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px greenyellow, 0 0 25px greenyellow;
+}
+
+.read:hover {
+    background: greenyellow;
+    color: black;
+    box-shadow: 0 0 20px greenyellow;
+}
+
+.services-list div:hover {
+    transform: translateY(-10px);
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .sub-title {
+        font-size: 40px; /* Adjust font size */
+        padding-bottom: 50px; /* Adjust padding */
+    }
+
+    .container {
+        padding: 60px 20px; /* Reduce padding */
+    }
+
+    .services-list {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .services-list div {
+        width: 100%; /* Full width of container */
+        padding: 20px; /* Adjust padding */
+        font-size: 14px; /* Slightly larger font size for readability */
+        margin-bottom: 20px; /* Space between items */
+        border-right: none; /* Remove right border */
+    }
+
+    .services-list div i {
+        font-size: 40px; /* Adjust icon size */
+    }
+
+    .services-list div h2 {
+        font-size: 24px; /* Adjust heading size */
+    }
+
+    .services-list div p {
+        font-size: 16px; /* Adjust paragraph font size */
+    }
+
+    .read {
+        font-size: 14px; /* Adjust button font size */
+        padding: 10px 20px; /* Adjust button padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .sub-title {
+        font-size: 30px; /* Further reduce font size */
+        padding-bottom: 30px; /* Further reduce padding */
+    }
+
+    .services-list div {
+        padding: 15px; /* Further adjust padding */
+    }
+
+    .services-list div i {
+        font-size: 30px; /* Further adjust icon size */
+    }
+
+    .services-list div h2 {
+        font-size: 20px; /* Further adjust heading size */
+    }
+
+    .services-list div p {
+        font-size: 14px; /* Further adjust paragraph font size */
+    }
+
+    .read {
+        font-size: 12px; /* Further adjust button font size */
+        padding: 8px 16px; /* Further adjust button padding */
+    }
+}
+
+
+.skills-section {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center-align children horizontally */
+    padding: 80px 15px; /* Added padding for better spacing */
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allow wrapping to handle smaller screens */
+}
+
+.container1 {
+    width: 45%;
+    padding: 30px;
+    box-sizing: border-box;
+    margin-bottom: 30px; /* Added margin to separate columns */
+}
+
+.heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.skills-heading {
+    font-size: 60px;
+    text-align: center;
+    color: greenyellow;
+    margin-bottom: 20px; /* Adjusted margin */
+}
+
+.bar {
+    font-size: 23px;
+}
+
+.technical-bars .bar {
+    margin: 20px 0;
+}
+
+.technical-bars .bar:first-child {
+    margin-top: 0;
+}
+
+.technical-bars .bar:last-child {
+    margin-bottom: 0;
+}
+
+.technical-bars .bar .info {
+    margin-bottom: 5px;
+}
+
+.technical-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.technical-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.technical-bars .bar .progress-line span {
+    height: 100%;
+    background-color: greenyellow;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.progress-line.html span {
+    width: 90%;
+}
+
+.progress-line.css span {
+    width: 85%;
+}
+
+.progress-line.javascript span {
+    width: 70%;
+}
+
+.progress-line.python span {
+    width: 80%;
+}
+
+.progress-line.java span {
+    width: 85%;
+}
+
+.progress-line.office span {
+    width: 90%;
+}
+
+.progress-line span::after {
+    position: absolute;
+    padding: 1px 8px;
+    background-color: black;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+.progress-line.html span::after {
+    content: "90%";
+}
+
+.progress-line.css span::after {
+    content: "85%";
+}
+
+.progress-line.javascript span::after {
+    content: "70%";
+}
+
+.progress-line.python span::after {
+    content: "80%";
+}
+
+.progress-line.java span::after {
+    content: "85%";
+}
+
+.progress-line.office span::after {
+    content: "90%";
+}
+
+.progress-line span::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: black;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+.radial-bar {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.radial-bar-item {
+    width: 45%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.radial-bar-item svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+}
+
+.radial-bar-item .path {
+    stroke-width: 10;
+    stroke: greenyellow;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.radial-bar-item .path-1 {
+    animation: animate-path1 1s 1s linear forwards;
+}
+
+.radial-bar-item .path-2 {
+    animation: animate-path2 1s 1s linear forwards;
+}
+
+.radial-bar-item .path-3 {
+    animation: animate-path3 1s 1s linear forwards;
+}
+
+.radial-bar-item .path-4 {
+    animation: animate-path4 1s 1s linear forwards;
+}
+
+@keyframes animate-path1 {
+    100% {
+        stroke-dashoffset: 50;
+    }
+}
+
+@keyframes animate-path2 {
+    100% {
+        stroke-dashoffset: 175;
+    }
+}
+
+@keyframes animate-path3 {
+    100% {
+        stroke-dashoffset: 125;
+    }
+}
+
+@keyframes animate-path4 {
+    100% {
+        stroke-dashoffset: 75;
+    }
+}
+
+.radial-bar-item .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.radial-bar-item .text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* Base Styles for Mobile */
+@media (max-width: 768px) {
+    .skills-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .container1 {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .heading1 {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .bar {
+        font-size: 18px;
+    }
+
+    .radial-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .radial-bar-item {
+        width: 80%;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+
+    .radial-bar-item svg {
+        width: 100px;
+        height: 130px;
+    }
+
+    .radial-bar-item .percentage,
+    .radial-bar-item .text {
+        font-size: 14px;
+    }
+}
+
+/* Adjusting for smaller screens */
+@media (max-width: 480px) {
+    .heading1 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .bar {
+        font-size: 16px;
+    }
+
+    .radial-bar-item {
+        width: 90%;
+        height: 120px;
+    }
+
+    .radial-bar-item svg {
+        width: 80px;
+        height: 100px;
+    }
+
+    .radial-bar-item .percentage,
+    .radial-bar-item .text {
+        font-size: 12px;
+    }
+}
+
+
+.main-text {
+    padding-top: 150px;
+    margin-top: 5px;
+}
+
+.main-text h2 {
+    font-size: 60px;
+    line-height: 1;
+    text-align: center;
+}
+
+.main-text h2 span {
+    color: greenyellow;
+}
+
+.portfolio-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 150px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.row {
+    flex: 1;
+    max-width: 30%;
+    /* Adjust this percentage to control the width of each project card */
+    margin: 0 10px;
+    /* Adds some space between the cards */
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.row img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(black, greenyellow);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    transition: height 0.5s;
+}
+
+.layer h5 {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.layer p {
+    color: white;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.layer i {
+    color: greenyellow;
+    margin-top: 20px;
+    font-size: 20px;
+    background: #fff;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.row:hover img {
+    transform: scale(1.1);
+}
+
+.row:hover .layer {
+    height: 100%;
+}
+
+/* Base Styles for Mobile */
+@media (max-width: 768px) {
+    .main-text {
+        padding-top: 80px; /* Reduced padding for mobile */
+        margin-top: 0; /* Reset margin for mobile */
+    }
+
+    .main-text h2 {
+        font-size: 40px; /* Reduced font size */
+        line-height: 1.2;
+    }
+
+    .main-text h2 span {
+        font-size: 36px; /* Adjusted font size for span */
+    }
+
+    .portfolio-content {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px; /* Reduced margin */
+    }
+
+    .row {
+        width: 100%; /* Full width for mobile */
+        max-width: none; /* Remove max-width restriction */
+        margin: 10px 0; /* Vertical margin for spacing */
+    }
+
+    .row img {
+        border-radius: 8px;
+    }
+
+    .layer {
+        padding: 0 20px; /* Reduced padding for mobile */
+    }
+
+    .layer h5 {
+        font-size: 18px; /* Reduced font size */
+        margin-bottom: 10px; /* Reduced margin */
+    }
+
+    .layer p {
+        font-size: 0.9rem; /* Reduced font size */
+        line-height: 1.6; /* Adjust line height */
+    }
+
+    .layer i {
+        font-size: 18px; /* Reduced icon size */
+        width: 50px; /* Adjusted width */
+    }
+}
+
+/* For even smaller screens */
+@media (max-width: 480px) {
+    .main-text {
+        padding-top: 60px; /* Further reduced padding */
+    }
+
+    .main-text h2 {
+        font-size: 30px; /* Further reduced font size */
+    }
+
+    .main-text h2 span {
+        font-size: 28px; /* Adjusted font size for span */
+    }
+
+    .portfolio-content {
+        margin-top: 20px; /* Further reduced margin */
+    }
+
+    .row {
+        margin: 5px 0; /* Even smaller vertical margin */
+    }
+
+    .layer {
+        padding: 0 10px; /* Further reduced padding */
+    }
+
+    .layer h5 {
+        font-size: 16px; /* Further reduced font size */
+        margin-bottom: 5px; /* Further reduced margin */
+    }
+
+    .layer p {
+        font-size: 0.8rem; /* Further reduced font size */
+        line-height: 1.5; /* Adjust line height */
+    }
+
+    .layer i {
+        font-size: 16px; /* Further reduced icon size */
+        width: 40px; /* Adjusted width */
+    }
+}
+
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+    padding: 0 0 0 100px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.contact-text h2 {
+    font-size: 60px;
+    /* Adjusted for better readability */
+    line-height: 1;
+    text-align: center;
+}
+
+.contact-text h2 span {
+    color: greenyellow;
+}
+
+.contact-text h4 {
+    margin: 15px 0;
+    color: white;
+    font-size: 24px;
+    /* Adjusted for consistency with h2 */
+    font-weight: 600;
+    text-align: center;
+    /* Centered for better alignment */
+}
+
+.contact-text p {
+    color: white;
+    font-size: 18px;
+    /* Adjusted for better readability */
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    text-align: center;
+    /* Centered for better alignment */
+}
+
+.contact-list {
+    margin-bottom: 3rem;
+    text-align: center;
+    /* Centered for better alignment */
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+    display: inline-block;
+    /* Adjusted for horizontal alignment */
+}
+
+.contact-list i {
+    display: inline-block;
+    color: greenyellow;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 10px;
+    /* Added space between icon and text */
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 1rem;
+}
+
+.contact-icons a {
+    text-decoration: none;
+}
+
+.contact-icons i {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid greenyellow;
+    border-radius: 50%;
+    font-size: 20px;
+    color: greenyellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.5s, color 0.5s, box-shadow 0.5s;
+}
+
+.contact-icons i:hover {
+    background: greenyellow;
+    color: black;
+    box-shadow: 0 0 20px greenyellow;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: right;
+    padding-right: 100px;
+}
+
+.contact-form form {
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 18px;
+    background: rgb(255, 253, 253);
+    color: black;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 220px;
+}
+
+.contact-form .send {
+    width: 50%;
+    display: inline-block;
+    padding: 14px 60px;
+    background: greenyellow;
+    border-radius: 40px;
+    font-size: 18px;
+    color: black;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.5s, color 0.5s, box-shadow 0.5s;
+}
+
+.contact-form .send:hover {
+    background: greenyellow;
+    color: black;
+    box-shadow: 0 0 20px greenyellow;
+}
+
+
+.top {
+    position: fixed;
+    bottom: 2.1rem;
+    right: 2.1rem;
+}
+
+.top i {
+    color: black;
+    background: greenyellow;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+}
+
+/* Base Styles for Mobile */
+@media (max-width: 768px) {
+    .contact {
+        grid-template-columns: 1fr; /* Stack columns vertically on small screens */
+        padding: 0 15px; /* Reduced padding */
+        margin-top: 80px; /* Adjusted margin */
+        gap: 2rem; /* Reduced gap */
+    }
+
+    .contact-text h2 {
+        font-size: 40px; /* Reduced font size */
+    }
+
+    .contact-text h2 span {
+        font-size: 36px; /* Adjusted font size for span */
+    }
+
+    .contact-text h4 {
+        font-size: 20px; /* Reduced font size */
+        margin: 10px 0; /* Reduced margin */
+    }
+
+    .contact-text p {
+        font-size: 16px; /* Reduced font size */
+        line-height: 1.6; /* Adjusted line height */
+        margin-bottom: 1.5rem; /* Reduced bottom margin */
+    }
+
+    .contact-list {
+        margin-bottom: 2rem; /* Reduced margin */
+    }
+
+    .contact-list li {
+        display: block; /* Stack list items vertically */
+        margin-bottom: 8px; /* Reduced margin */
+    }
+
+    .contact-icons {
+        flex-direction: row;
+        gap: 10px; /* Adjusted gap */
+        margin-top: 1rem; /* Margin remains same */
+    }
+
+    .contact-icons i {
+        width: 35px; /* Reduced icon size */
+        height: 35px; /* Reduced icon size */
+        font-size: 18px; /* Adjusted font size */
+    }
+
+    .contact-form {
+        padding: 0 10px; /* Reduced padding */
+    }
+
+    .contact-form form {
+        width: 100%;
+        max-width: 100%; /* Full width on mobile */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 15px; /* Reduced padding */
+        font-size: 0.9rem; /* Reduced font size */
+    }
+
+    .contact-form textarea {
+        height: 180px; /* Reduced height */
+    }
+
+    .contact-form .send {
+        padding: 12px 40px; /* Reduced padding */
+        font-size: 16px; /* Reduced font size */
+    }
+
+    .top {
+        bottom: 1.5rem; /* Adjusted bottom position */
+        right: 1.5rem; /* Adjusted right position */
+    }
+
+    .top i {
+        font-size: 18px; /* Reduced icon size */
+        padding: 8px; /* Reduced padding */
+    }
+}
+
+/* For even smaller screens */
+@media (max-width: 480px) {
+    .contact-text h2 {
+        font-size: 30px; /* Further reduced font size */
+    }
+
+    .contact-text h2 span {
+        font-size: 28px; /* Further adjusted font size */
+    }
+
+    .contact-text h4 {
+        font-size: 18px; /* Further reduced font size */
+        margin: 8px 0; /* Further reduced margin */
+    }
+
+    .contact-text p {
+        font-size: 14px; /* Further reduced font size */
+        margin-bottom: 1rem; /* Further reduced margin */
+    }
+
+    .contact-list li {
+        margin-bottom: 6px; /* Further reduced margin */
+    }
+
+    .contact-icons i {
+        width: 30px; /* Further reduced icon size */
+        height: 30px; /* Further reduced icon size */
+        font-size: 16px; /* Further reduced font size */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 12px; /* Further reduced padding */
+        font-size: 0.8rem; /* Further reduced font size */
+    }
+
+    .contact-form textarea {
+        height: 150px; /* Further reduced height */
+    }
+
+    .contact-form .send {
+        padding: 10px 30px; /* Further reduced padding */
+        font-size: 14px; /* Further reduced font size */
+    }
+
+    .top {
+        bottom: 1rem; /* Further adjusted bottom position */
+        right: 1rem; /* Further adjusted right position */
+    }
+
+    .top i {
+        font-size: 16px; /* Further reduced icon size */
+        padding: 6px; /* Further reduced padding */
+    }
+}
