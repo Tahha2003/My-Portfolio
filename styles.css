@@ -810,47 +810,47 @@ body {
     transform: scale(1.05);
 }
 
-.services-list div p {
-    text-align: justify;
-}
+    .services-list div p {
+        text-align: justify;
+    }
 
-.services-list div a {
-    text-decoration: none;
-    color: black;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
-}
+    .services-list div a {
+        text-decoration: none;
+        color: black;
+        font-size: 12px;
+        margin-top: 20px;
+        display: inline-block;
+    }
 
-.read {
-    display: inline-block;
-    padding: 12px 28px;
-    background: greenyellow;
-    border-radius: 40px;
-    font-size: 16px;
-    color: black;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 600;
-    opacity: 0;
-    animation: slideTop 1s ease forwards;
-    animation-delay: 2s;
-    box-shadow: 0 0 5px greenyellow, 0 0 25px greenyellow;
-}
+    .read {
+        display: inline-block;
+        padding: 12px 28px;
+        background: greenyellow;
+        border-radius: 40px;
+        font-size: 16px;
+        color: black;
+        letter-spacing: 1px;
+        text-decoration: none;
+        font-weight: 600;
+        opacity: 0;
+        animation: slideTop 1s ease forwards;
+        animation-delay: 2s;
+        box-shadow: 0 0 5px greenyellow, 0 0 25px greenyellow;
+    }
 
-.read:hover {
-    background: greenyellow;
-    color: black;
-    box-shadow: 0 0 20px greenyellow;
-    transform: translateY(-2px);
-}
+    .read:hover {
+        background: greenyellow;
+        color: black;
+        box-shadow: 0 0 20px greenyellow;
+        transform: translateY(-2px);
+    }
 
-.services-list div:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(173, 255, 47, 0.4);
-    background: rgba(173, 255, 47, 0.1);
-}
-
+    .services-list div:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 40px rgba(173, 255, 47, 0.4);
+        background: rgba(173, 255, 47, 0.1);
+    }
+    
 /* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
     .sub-title {
@@ -873,6 +873,13 @@ body {
         font-size: 14px; /* Slightly larger font size for readability */
         margin-bottom: 20px; /* Space between items */
         border-right: none; /* Remove right border */
+        display: flex;
+        flex-direction: column;
+        min-height: 320px;
+    }
+    
+    .services-list div > *:not(.read) {
+        flex-grow: 1;
     }
 
     .services-list div i {
@@ -890,6 +897,7 @@ body {
     .read {
         font-size: 14px; /* Adjust button font size */
         padding: 10px 20px; /* Adjust button padding */
+        align-self: flex-start;
     }
 }
 
