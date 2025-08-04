@@ -442,6 +442,7 @@ body {
                 0 0 90px rgba(173, 255, 47, 0.1);
     transition: all 0.3s ease-in-out;
     border: 3px solid rgba(173, 255, 47, 0.3);
+    object-fit: cover; /* Ensure the image covers the area properly */
 }
 
 .about-img img:hover {
@@ -455,6 +456,7 @@ body {
 .about-text h2 {
     color: #fff;
     font-size: 60px;
+    margin-top: 0; /* Ensure proper spacing at the top */
 }
 
 .about-text h2 span {
@@ -686,6 +688,11 @@ body {
         padding: 12px 30px;
         font-size: 16px;
     }
+    
+    /* Ensure proper spacing for all elements */
+    * {
+        box-sizing: border-box;
+    }
 }
 
 /* Further adjustments for very small screens (like phones) */
@@ -725,6 +732,7 @@ body {
     padding-bottom: 10px;
     position: relative;
     margin-bottom: 50px;
+    margin-top: 0; /* Ensure proper spacing at the top */
 }
 
 .sub-title::after {
@@ -770,6 +778,7 @@ body {
     flex: 1 1 259px;
     position: relative;
     overflow: hidden;
+    box-sizing: border-box; /* Ensure padding is included in width/height */
 }
 
 .services-list div::before {
@@ -803,6 +812,7 @@ body {
     font-weight: 500;
     margin-bottom: 15px;
     transition: all 0.3s ease;
+    margin-top: 0; /* Ensure proper spacing at the top */
 }
 
 .services-list div:hover h2 {
@@ -812,6 +822,8 @@ body {
 
     .services-list div p {
         text-align: justify;
+        margin-top: 0; /* Ensure proper spacing at the top */
+        margin-bottom: 20px; /* Ensure proper spacing at the bottom */
     }
 
     .services-list div a {
@@ -836,6 +848,7 @@ body {
         animation: slideTop 1s ease forwards;
         animation-delay: 2s;
         box-shadow: 0 0 5px greenyellow, 0 0 25px greenyellow;
+        box-sizing: border-box; /* Ensure padding is included in width/height */
     }
 
     .read:hover {
@@ -936,6 +949,7 @@ body {
     align-items: center; /* Center-align children horizontally */
     padding: 120px 15px 100px 15px; /* Added padding for better spacing */
     min-height: 100vh;
+    box-sizing: border-box; /* Ensure padding is included in width/height */
 }
 
 .skills-container {
@@ -948,7 +962,7 @@ body {
 }
 
 .container1 {
-    width: 45%;
+    width: 30%;
     padding: 30px;
     box-sizing: border-box;
     margin-bottom: 30px; /* Added margin to separate columns */
@@ -961,6 +975,7 @@ body {
     position: relative;
     font-size: 28px;
     font-weight: 600;
+    margin-top: 0; /* Ensure proper spacing at the top */
 }
 
 .heading1::after {
@@ -981,6 +996,7 @@ body {
     text-align: center;
     color: greenyellow;
     margin-bottom: 20px; /* Adjusted margin */
+    margin-top: 0; /* Ensure proper spacing at the top */
 }
 
 
@@ -1283,17 +1299,17 @@ section.animate-in {
 .skill-item[data-skill="HTML"] i { color: #ff7930; }
 .skill-item[data-skill="CSS"] i { color: #30c9ff; }
 .skill-item[data-skill="JavaScript"] i { color: #ffe630; }
-.skill-item[data-skill="Python"] i { color: #195fa0; }
-.skill-item[data-skill="Java"] i { color: #f70808; }
-.skill-item[data-skill="Microsoft Office"] i { color: #02f6ff; }
-
-/* Professional Skills Icons */
-.skill-item[data-skill="Creativity"] i { color: #ff6b6b; }
-.skill-item[data-skill="Teamwork"] i { color: #4ecdc4; }
-.skill-item[data-skill="Communication"] i { color: #45b7d1; }
-.skill-item[data-skill="Problem Solving"] i { color: #f9ca24; }
-.skill-item[data-skill="Leadership"] i { color: #ffd700; }
-.skill-item[data-skill="Time Management"] i { color: #32cd32; }
+.skill-item[data-skill="ReactJS"] i { color: #61dbfb; }
+.skill-item[data-skill="Bootstrap"] i { color: #7952b3; }
+.skill-item[data-skill="NodeJS"] i { color: #339933; }
+.skill-item[data-skill="PHP"] i { color: #777bb3; }
+.skill-item[data-skill="MySQL"] i { color: #4479a1; }
+.skill-item[data-skill="Visual Studio"] i { color: #654FF0; }
+.skill-item[data-skill="Visual Studio Code"] i { color: #007ACC; }
+.skill-item[data-skill="Git"] i { color: #f34f29; }
+.skill-item[data-skill="AI"] i { color: #ff7c00; }
+.skill-item[data-skill="PS"] i { color: #00c8ff; }
+.skill-item[data-skill="MS Office"] i { color: #d83b01; }
 
 .skill-name {
     color: white;
@@ -1824,12 +1840,14 @@ section.animate-in {
     text-align: center;
     color: white;
     min-height: 100vh;
+    box-sizing: border-box; /* Ensure padding is included in width/height */
 }
 
 .portfolio .main-text h2 {
     font-size: 60px;
     line-height: 1;
     color: white;
+    margin-top: 0; /* Ensure proper spacing at the top */
 }
 
 .portfolio .main-text h2 span {
@@ -1855,6 +1873,7 @@ section.animate-in {
     backdrop-filter: blur(10px);
     position: relative;
     overflow: hidden;
+    box-sizing: border-box; /* Ensure padding is included in width/height */
 }
 
 .project-category-box::before {
@@ -1885,6 +1904,7 @@ section.animate-in {
     border-bottom: 2px solid greenyellow;
     padding-bottom: 8px;
     transition: all 0.3s ease;
+    margin-top: 0; /* Ensure proper spacing at the top */
 }
 
 .project-category-box:hover h3 {
@@ -1896,6 +1916,8 @@ section.animate-in {
     list-style: none;
     padding: 0;
     text-align: left;
+    margin-top: 0; /* Ensure proper spacing at the top */
+    margin-bottom: 0; /* Ensure proper spacing at the bottom */
 }
 
 .project-category-box ul li {
@@ -1972,6 +1994,7 @@ section.animate-in {
     gap: 3rem;
     padding: 120px 100px 100px 100px;
     min-height: 100vh;
+    box-sizing: border-box; /* Ensure padding is included in width/height */
 }
 
 .contact-text h2 {
@@ -1979,6 +2002,7 @@ section.animate-in {
     /* Adjusted for better readability */
     line-height: 1;
     text-align: center;
+    margin-top: 0; /* Ensure proper spacing at the top */
 }
 
 .contact-text h2 span {
@@ -2003,12 +2027,14 @@ section.animate-in {
     margin-bottom: 2rem;
     text-align: center;
     /* Centered for better alignment */
+    margin-top: 0; /* Ensure proper spacing at the top */
 }
 
 .contact-list {
     margin-bottom: 3rem;
     text-align: center;
     /* Centered for better alignment */
+    margin-top: 0; /* Ensure proper spacing at the top */
 }
 
 .contact-list li {
@@ -2031,6 +2057,7 @@ section.animate-in {
     justify-content: center;
     gap: 15px;
     margin-top: 1rem;
+    margin-top: 0; /* Ensure proper spacing at the top */
 }
 
 .contact-icons a {
@@ -2083,6 +2110,7 @@ section.animate-in {
     border-radius: 0.5rem;
     border: 1px solid rgba(173, 255, 47, 0.2);
     transition: all 0.3s ease;
+    box-sizing: border-box; /* Ensure padding is included in width/height */
 }
 
 .contact-form input:focus,
@@ -2118,6 +2146,7 @@ section.animate-in {
     box-shadow: 0 5px 20px rgba(173, 255, 47, 0.4);
     position: relative;
     overflow: hidden;
+    box-sizing: border-box; /* Ensure padding is included in width/height */
 }
 
 .contact-form .send::before {
@@ -2160,6 +2189,48 @@ section.animate-in {
     padding: 10px;
     border-radius: 0.5rem;
     transition: all 0.3s ease;
+}
+
+/* Copyright Section Styles */
+.last-line {
+    background: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(173, 255, 47, 0.2);
+    padding: 20px 0;
+    margin-top: 50px;
+    position: relative;
+    z-index: 1000;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 60px;
+}
+
+.last-line p {
+    color: #ffffff !important;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.last-line p:hover {
+    color: greenyellow;
+    transition: color 0.3s ease;
+}
+
+/* Footer Styles */
+footer {
+    position: relative;
+    z-index: 10;
+    margin-top: 0;
+    padding: 0;
 }
 
 .top:hover i {
@@ -2304,5 +2375,30 @@ section.animate-in {
     .top i {
         font-size: 16px; /* Further reduced icon size */
         padding: 6px; /* Further reduced padding */
+    }
+}
+
+/* Copyright Section Responsive Styles */
+@media (max-width: 768px) {
+    .last-line {
+        padding: 15px 0;
+        margin-top: 30px;
+    }
+    
+    .last-line p {
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .last-line {
+        padding: 12px 0;
+        margin-top: 20px;
+    }
+    
+    .last-line p {
+        font-size: 12px;
+        letter-spacing: 0.3px;
     }
 }
