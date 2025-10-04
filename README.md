@@ -25,6 +25,7 @@ A modern, responsive personal portfolio website showcasing Rizwan Aleem Tahha's 
 - **Active Navigation**: Highlights current section in navigation
 - **Smooth Scrolling**: Seamless navigation between sections
 - **Back to Top**: Floating button to return to top of page
+- **Theme Toggle**: Dark/Light mode switcher with localStorage persistence
 
 ## 🛠️ Technologies Used
 
@@ -34,6 +35,7 @@ A modern, responsive personal portfolio website showcasing Rizwan Aleem Tahha's 
 - **JavaScript (ES6+)**: Interactive functionality and animations
 - **Boxicons**: Icon library for UI elements
 - **Typed.js**: Typing animation effect
+- **localStorage**: Theme preference persistence
 
 ### Design & Styling
 - **CSS Grid & Flexbox**: Modern layout techniques
@@ -53,6 +55,8 @@ Portfolio/
 ├── Background 1.jpg        # Background image
 ├── documents/
 │   └── Rizwan Aleem Tahha (CV).pdf  # Downloadable CV
+├── images/
+│   └── cisco_pkt.png       # Cisco Packet Tracer icon for skills section
 └── README.md              # Project documentation
 ```
 
@@ -85,8 +89,9 @@ Portfolio/
 
 ### Color Palette
 - **Primary**: `#ffffff` (White)
-- **Accent**: `greenyellow` (#ADFF2F)
-- **Background**: Dark gradient with overlay
+- **Accent (Dark Theme)**: `greenyellow` (#ADFF2F)
+- **Accent (Light Theme)**: `orange` (#FF8C00)
+- **Background**: Dark gradient with overlay (Dark Theme) / Light gradient (Light Theme)
 - **Glass Effect**: `rgba(255, 255, 255, 0.05)` with backdrop blur
 
 ### Typography
