@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🖥️ Portfolio</title>
     <link href="styles.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 
 <body>
+    <!-- Header -->
     <header class="header">
-        <a href="#" class="logo">Port<span style="color: greenyellow;">folio</span></a>
+        <a href="#" class="logo">Port<span style="color: #FFD700;">Folio</span></a>
         <nav class="navbar">
             <a href="#home" style="--i:1" class="active">HOME</a>
             <a href="#about" style="--i:2">ABOUT</a>
@@ -27,235 +31,310 @@
         </div>
     </header>
 
+    <!-- Home -->
     <section class="home" id="home">
         <div class="home-content">
             <h3>Hello, It's Me</h3>
-            <h1><span style="color: greenyellow;">Rizwan</span> Aleem Tahha</h1>
+            <h1><span style="color: #FFD700;">Rizwan</span> Aleem Tahha</h1>
             <h3>And I'm a <span class="text"></span></h3>
-            <p>I'm a <span style="color: greenyellow;">Software Engineering Student</span>
-                <br>having much experience in <span style="color: greenyellow;"><b>Web Developing</b></span> and <span
-                    style="color: greenyellow;"><b>Graphic Designing....</b></span>
+            <p>I'm a <span style="color: #FFD700;">Software Engineer</span>
+                <br>having experience in <span style="color: #FFD700;"><b><i>Full-Stack
+                            Development</i></b></span> and <span style="color: #FFD700;"><b><i>UI-UX
+                            Design</i></b></span>
             </p>
+
             <div class="home-sci">
-                <a href="https://www.facebook.com/mtahha.aleem" target="_blank" style="--i:6"><i
-                        class='bx bxl-facebook'></i></a>
-                <a href="https://www.instagram.com/tahha_aleem/" target="_blank" style="--i:7"><i
-                        class='bx bxl-instagram'></i></a>
-                <a href="https://wa.me/qr/UDTD4YZ3VEK3K1" target="_blank" style="--i:8"><i
-                        class='bx bxl-whatsapp'></i></a>
-                <a href="https://www.linkedin.com/in/rizwan-aleem-tahha-20a70b254/" target="_blank" style="--i:9"><i
-                        class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/Tahha2003" target="_blank" style="--i:10"><i class='bx bxl-github'></i></a>
+                <a href="https://www.facebook.com/mtahha.aleem" target="_blank" style="--i:6"><img width="48"
+                        height="48" src="https://img.icons8.com/color/48/facebook.png" alt="facebook" /></a>
+                <a href="https://www.instagram.com/tahha_aleem/" target="_blank" style="--i:7"><img width="48"
+                        height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new" /></a>
+                <a href="https://wa.me/qr/UDTD4YZ3VEK3K1" target="_blank" style="--i:8"><img width="48" height="48"
+                        src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="whatsapp--v1" /></a>
+                <a href="https://www.linkedin.com/in/rizwan-aleem-tahha-20a70b254/" target="_blank" style="--i:9"><img
+                        width="48" height="48" src="https://img.icons8.com/color/48/linkedin.png" alt="linkedin" /></a>
+                <a href="https://github.com/Tahha2003" target="_blank" style="--i:10"><img width="48" height="48"
+                        src="https://img.icons8.com/fluency/48/github.png" alt="github" /></a>
             </div>
             <a href="#about" class="btn-box">More About Me</a>
         </div>
     </section>
 
+    <!-- About -->
     <section class="about" id="about">
         <div class="about-img">
             <img src="Profile_Pic.png" alt="Rizwan Aleem Tahha">
         </div>
         <div class="about-text">
-            <h2>About <span>Me</span></h2>
-            <h4><span style="color: greenyellow;"><b>Software Engineering Student!</b></span></h4>
-            <p> I’m a passionate Software Engineering student with a strong foundation in web development and graphic
-                design. I specialize in crafting seamless user experiences that blend technical functionality with
-                creative aesthetics. With a focus on front-end development and visual design, I aim to build engaging
-                and innovative digital solutions. </p>
+            <h2 class="sub-title-am"><span class="highlighted-text">About <span
+                        style="color: aliceblue;">Me</span></span></h2>
+            <h3 class="about-subtitle"><span style="color: #FFD700;"><b>Software</span> Engineer | <span
+                    style="color: #FFD700;">Full-Stack</span> Developer | <span style="color: #FFD700;">UI-UX</span>
+                Designer</b></h3>
+            <p> I'm a passionate Software Engineer with a strong foundation in full-stack development and UI-UX design.
+                I specialize in crafting seamless user experiences that blend technical functionality with creative
+                aesthetics. With expertise in both front-end and back-end development, I aim to build engaging and
+                innovative digital solutions.
+            </p>
 
             <a href="#contact" class="btn-box">Hire Me</a>
             <a href="documents/Rizwan Aleem Tahha (CV).pdf" class="btn-box" download>Download CV</a>
         </div>
     </section>
 
+    <!-- Services -->
     <section class="services" id="services">
         <div class="container">
             <h1 class="sub-title">My <Span>Services</Span></h1>
             <div class="services-list">
                 <div>
-                    <i class='bx bx-laptop' style='color: greenyellow'></i>
-                    <h2><span style="color: greenyellow;">Web</span> Development</h2>
-                    <p>"I build modern, responsive websites focused on performance, accessibility, and clean user
-                        experiences. Using HTML, CSS, JavaScript, and modern frameworks, I bring everything from
-                        portfolios to dynamic web apps to life."</p>
+                    <img width="50" height="50"
+                        src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/external-full-stack-computer-programming-flaticons-flat-flat-icons-2.png"
+                        alt="external-full-stack-computer-programming-flaticons-flat-flat-icons-2" />
+                    <h2><span style="color: #FFD700;"><b>Full-Stack</span> Development</b></h2>
+                    <p>I build modern, responsive full-stack applications focused on performance, accessibility, and
+                        clean user experiences. Using HTML, CSS, JavaScript, Node.js, and modern frameworks, I bring
+                        everything from portfolios to dynamic web apps to life.</p>
                     <a href="#portfolio" class="read">Learn More</a>
                 </div>
 
                 <div>
-                    <i class='bx bx-code-alt' style='color: greenyellow'></i>
-                    <h2><span style="color: greenyellow;">Software</span> Development</h2>
-                    <p>"I develop scalable and maintainable software solutions using languages like Python and Java.
+                    <img width="50" height="50" src="https://img.icons8.com/fluency/48/laptop-coding.png"
+                        alt="laptop-coding" />
+                    <h2><span style="color: #FFD700;"><b>Software</span> Development</b></h2>
+                    <p>I develop scalable and maintainable software solutions using languages like Python and Java.
                         With a strong foundation in backend logic, APIs, and database integration, I craft software
-                        that’s functional, efficient, and future-ready."</p>
+                        that’s functional, efficient, and future-ready.</p>
                     <a href="#portfolio" class="read">Learn More</a>
                 </div>
 
                 <div>
-                    <i class='bx bx-palette' style='color:greenyellow'></i>
-                    <h2><span style="color: greenyellow;">Graphic</span> Designing</h2>
-                    <p>"I craft visually compelling designs using Adobe Photoshop, Illustrator, and Canva. From logos
-                        and branding to social media content and print-ready assets, I create designs that captivate and
-                        communicate effectively."</p>
+                    <img width="50" height="50" src="https://img.icons8.com/color/48/web-design.png" alt="web-design" />
+                    <h2><span style="color: #FFD700;"><b>UI-UX</span><br> Designing</b></h2>
+                    <p>I craft visually compelling user interfaces and user experiences using Figma, Adobe Photoshop,
+                        Illustrator, and Canva. From wireframes and prototypes to final designs, I create interfaces
+                        that captivate and communicate effectively while ensuring optimal user experience.</p>
                     <a href="#portfolio" class="read">Learn More</a>
                 </div>
             </div>
         </div>
-        </div>
     </section>
 
-
+    <!-- Skills -->
     <section class="skills-section" id="skills">
+        <h1 class="sub-title">My <span>Skills</span></h1>
 
-        <h1 class="" style="text-align: center; font-size: 60px; padding-bottom: 10px; color: greenyellow;">My <span
-                style="color: white;">Skills</span></h1>
         <div class="skills-container">
-            <div class="container1" id="frontend-skills">
-                <h1 class="heading1" style="color: white;">Front-end Skills <img width="50" height="50" src="https://img.icons8.com/external-flat-lima-studio/64/external-front-coding-flat-lima-studio.png" alt="external-front-coding-flat-lima-studio"/></h1>
+
+            <div class="container1">
+                <h1 class="heading1" style="color: #FFD700;">Front-end Skills
+                    <img width="40" height="40" src="https://img.icons8.com/bubbles/50/code.png" alt="code" />
+                </h1>
                 <div class="skills-grid">
-                    <div class="skill-item" data-skill="HTML">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/html-5--v1.png" alt="html-5--v1"/>
+                    <div class="skill-item">
+                        <img class="skill-icon" src="https://img.icons8.com/color/48/html-5--v1.png" alt="HTML" />
                         <span class="skill-name">HTML</span>
                     </div>
-                    <div class="skill-item" data-skill="CSS">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/css3.png" alt="css3"/>
+                    <div class="skill-item">
+                        <img class="skill-icon" src="https://img.icons8.com/color/48/css3.png" alt="CSS" />
                         <span class="skill-name">CSS</span>
                     </div>
-                    <div class="skill-item" data-skill="JavaScript">
-                        <img width="48" height="48" src="https://img.icons8.com/fluency/48/javascript.png" alt="javascript"/>
+                    <div class="skill-item">
+                        <img class="skill-icon" src="https://img.icons8.com/fluency/48/javascript.png"
+                            alt="JavaScript" />
                         <span class="skill-name">JavaScript</span>
                     </div>
-                    <div class="skill-item" data-skill="ReactJS">
-                        <img width="48" height="48" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png" alt="external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo"/>
+                    <div class="skill-item">
+                        <img class="skill-icon"
+                            src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"
+                            alt="ReactJS" />
                         <span class="skill-name">ReactJS</span>
                     </div>
-                    <div class="skill-item" data-skill="TypeScript">
-                        <img width="48" height="48" src="https://img.icons8.com/fluency/48/typescript--v2.png" alt="typescript--v2"/>
+                    <div class="skill-item">
+                        <img class="skill-icon" src="https://img.icons8.com/fluency/48/typescript--v2.png"
+                            alt="TypeScript" />
                         <span class="skill-name">TypeScript</span>
                     </div>
-                    <div class="skill-item" data-skill="Bootstrap">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/bootstrap--v1.png" alt="bootstrap--v1"/>
+                    <div class="skill-item">
+                        <img class="skill-icon" src="https://img.icons8.com/color/48/bootstrap--v1.png"
+                            alt="Bootstrap" />
                         <span class="skill-name">Bootstrap</span>
                     </div>
                 </div>
             </div>
 
-            <div class="container1" id="backend-skills">
-                <h1 class="heading1" style="color: white;">Back-end Skills <img width="50" height="50" src="https://img.icons8.com/color/48/code.png" alt="code"/></h1>
+            <div class="container1">
+                <h1 class="heading1" style="color: #FFD700;">Back-end Skills
+                    <img width="40" height="40" src="https://img.icons8.com/color/48/code.png" alt="backend-icon" />
+                </h1>
                 <div class="skills-grid">
-                    <div class="skill-item" data-skill="NodeJS">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/nodejs.png" alt="nodejs"/>
+                    <div class="skill-item">
+                        <img class="skill-icon" src="https://img.icons8.com/color/48/nodejs.png" alt="NodeJS" />
                         <span class="skill-name">NodeJS</span>
                     </div>
-                    <div class="skill-item" data-skill="PHP">
-                        <img width="48" height="48" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-hypertext-preprocessor-a-widely-used-open-source-general-purpose-scripting-language-logo-color-tal-revivo.png" alt="external-hypertext-preprocessor-a-widely-used-open-source-general-purpose-scripting-language-logo-color-tal-revivo"/>
+                    <div class="skill-item">
+                        <img class="skill-icon"
+                            src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-hypertext-preprocessor-a-widely-used-open-source-general-purpose-scripting-language-logo-color-tal-revivo.png"
+                            alt="PHP" />
                         <span class="skill-name">PHP</span>
                     </div>
-                    <div class="skill-item" data-skill="MySQL">
-                        <img width="48" height="48" src="https://img.icons8.com/fluency/48/mysql-logo.png" alt="mysql-logo"/>
+                    <div class="skill-item">
+                        <img class="skill-icon" src="https://img.icons8.com/fluency/48/mysql-logo.png" alt="MySQL" />
                         <span class="skill-name">MySQL</span>
                     </div>
+                    <div class="skill-item">
+                        <img class="skill-icon" width="48" height="48"
+                            src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/external-mongodb-a-cross-platform-document-oriented-database-program-logo-shadow-tal-revivo.png"
+                            alt="external-mongodb-a-cross-platform-document-oriented-database-program-logo-shadow-tal-revivo" />
+                        <span class="skill-name">MongoDB</span>
+                    </div>
+                    <div class="skill-item">
+                        <img class="skill-icon" width="48" height="48"
+                            src="https://img.icons8.com/ios/50/express-js.png" alt="express-js" />
+                        <span class="skill-name">Express</span>
+                    </div>
+                    <div class="skill-item">
+                        <img class="skill-icon" width="48" height="48" src="https://img.icons8.com/color/48/python.png"
+                            alt="python" />
+                        <span class="skill-name">Python</span>
+                    </div>
+                    <div class="skill-item">
+                        <img class="skill-icon" width="48" height="48"
+                            src="https://img.icons8.com/color/48/java-coffee-cup-logo--v1.png"
+                            alt="java-coffee-cup-logo--v1" />
+                        <span class="skill-name">Java</span>
+                    </div>
+
                 </div>
             </div>
 
-            <div class="container1" id="tools-skills">
-                <h1 class="heading1" style="color: white;">Tools <img width="50" height="50" src="https://img.icons8.com/liquid-glass/48/administrative-tools.png" alt="administrative-tools"/></h1>
+            <div class="container1">
+                <h1 class="heading1" style="color: #FFD700;">Tools
+                    <img width="40" height="40" src="https://img.icons8.com/liquid-glass/48/administrative-tools.png"
+                        alt="tools-icon" />
+                </h1>
                 <div class="skills-grid">
-                    <div class="skill-item" data-skill="Visual Studio">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/visual-studio--v2.png" alt="visual-studio--v2"/>
+                    <div class="skill-item">
+                        <img class="skill-icon" src="https://img.icons8.com/color/48/visual-studio--v2.png"
+                            alt="Visual Studio" />
                         <span class="skill-name">Visual Studio</span>
                     </div>
-                    <div class="skill-item" data-skill="Visual Studio Code">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/visual-studio-code-2019.png" alt="visual-studio-code-2019"/>
-                        <span class="skill-name">Visual Studio Code</span>
+                    <div class="skill-item">
+                        <img class="skill-icon" src="https://img.icons8.com/color/48/visual-studio-code-2019.png"
+                            alt="VS Code" />
+                        <span class="skill-name">VS Code</span>
                     </div>
-                    <div class="skill-item" data-skill="Git">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/git.png" alt="git"/>
+                    <div class="skill-item">
+                        <img class="skill-icon" src="https://img.icons8.com/color/48/git.png" alt="Git" />
                         <span class="skill-name">Git</span>
                     </div>
-                    <div class="skill-item" data-skill="Wordpress">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/wordpress.png" alt="wordpress"/>
+                    <div class="skill-item">
+                        <img class="skill-icon" src="https://img.icons8.com/color/48/wordpress.png" alt="WordPress" />
                         <span class="skill-name">WordPress</span>
                     </div>
-                    <div class="skill-item" data-skill="NetBeans">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/apache-netbeans.png" alt="apache-netbeans"/>
-                        <span class="skill-name">Apache NetBeans</span>
+                    <div class="skill-item">
+                        <img class="skill-icon" src="https://img.icons8.com/color/48/figma--v1.png" alt="Figma" />
+                        <span class="skill-name">Figma</span>
                     </div>
-                    <div class="skill-item" data-skill="Packet-Tarcer">
-                        <img width="48" height="48" src="https://img.icons8.com/ios-filled/50/FFFFFF/cisco-packet-tracer.png" alt="cisco-packet-tracer"/>
-                        <span class="skill-name">Cisco Packet Tarcer</span>
-                        
+                    <div class="skill-item">
+                        <img class="skill-icon" src="https://img.icons8.com/fluency/48/canva.png" alt="Canva" />
+                        <span class="skill-name">Canva</span>
                     </div>
-                    <div class="skill-item" data-skill="AI">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/adobe-illustrator--v1.png" alt="adobe-illustrator--v1"/>
-                        <span class="skill-name">Adobe Illustrator</span>
+                    <div class="skill-item">
+                        <img class="skill-icon" src="https://img.icons8.com/color/48/apache-netbeans.png"
+                            alt="NetBeans" />
+                        <span class="skill-name">NetBeans</span>
                     </div>
-                    <div class="skill-item" data-skill="PS">
-                        <img width="48" height="48" src="https://img.icons8.com/color/48/adobe-photoshop--v1.png" alt="adobe-photoshop--v1"/>
-                        <span class="skill-name">Adobe Photoshop</span>
+                    <div class="skill-item">
+                        <img class="skill-icon" width="48" height="48" src="images/cisco_pkt.png" alt="Packet Tracer" />
+                        <span class="skill-name">Packet Tracer</span>
                     </div>
-                    <div class="skill-item" data-skill="MS Office">
-                        <img width="48" height="48" src="https://img.icons8.com/fluency/48/microsoft-office-2019.png" alt="microsoft-office-2019"/>
-                        <span class="skill-name">Microsoft Office</span>
+                    <div class="skill-item">
+                        <img class="skill-icon" src="https://img.icons8.com/color/48/adobe-illustrator--v1.png"
+                            alt="Illustrator" />
+                        <span class="skill-name">Illustrator</span>
+                    </div>
+                    <div class="skill-item">
+                        <img class="skill-icon" src="https://img.icons8.com/color/48/adobe-photoshop--v1.png"
+                            alt="Photoshop" />
+                        <span class="skill-name">Photoshop</span>
+                    </div>
+                    <div class="skill-item">
+                        <img class="skill-icon" src="https://img.icons8.com/fluency/48/microsoft-office-2019.png"
+                            alt="MS Office" />
+                        <span class="skill-name">MS Office</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Portfolio/ Projects -->
     <section class="portfolio" id="portfolio">
 
         <div class="main-text">
-            <h2>Latest <span>Project</span></h2>
+            <h2 class="sub-title">Latest <span>Project</span></h2>
         </div>
         <div class="project-list-container">
             <div class="project-category-box">
                 <h3>AI/ML Based Projects</h3>
                 <ul>
-                    <li><a href="https://github.com/Tahha2003/Currency-Prediction-System" target="_blank">💱Currency Exchange Prediction📉</a></li>
-                    
+                    <li><a href="https://github.com/Tahha2003/Currency-Prediction-System" target="_blank">💱 Currency
+                            Exchange Prediction 📉</a></li>
                 </ul>
             </div>
             <div class="project-category-box">
                 <h3>Web Based Projects</h3>
                 <ul>
-                    <li><a href="https://github.com/Tahha2003/Mobile-Store" target="_blank">📲Mobile E-Commerce🛒</a></li>
-                    <li><a href="https://github.com/Tahha2003/Shoes-E-Commerce" target="_blank">👟Shoes E-Commerce🛒</a></li>
-                    <li><a href="https://github.com/Tahha2003/Man-Studio" target="_blank">👕MAN Studio🛒</a></li>
-                    
+                    <li><a href="https://github.com/Tahha2003/Mobile-Store" target="_blank">📲 Mobile E-Commerce 🛒</a>
+                    </li>
+                    <li><a href="https://github.com/Tahha2003/Shoes-E-Commerce" target="_blank">👟 Shoes E-Commerce
+                            🛒</a>
+                    </li>
+                    <li><a href="https://github.com/Tahha2003/Man-Studio" target="_blank">👕 MAN Studio 🛒</a></li>
                 </ul>
             </div>
             <div class="project-category-box">
                 <h3>Other Projects</h3>
                 <ul>
-                    <li><a href="https://github.com/Tahha2003/Airport-Network-Topology" target="_blank">🛫Airport Network Topology🌐</a></li>
-                    <li><a href="https://github.com/Tahha2003/Java-POS" target="_blank">☕Java Simple POS🛒</a></li>
-                  
+                    <li><a href="https://github.com/Tahha2003/Airport-Network-Topology" target="_blank">🛫 Airport
+                            Network Topology 🌐</a></li>
+                    <li><a href="https://github.com/Tahha2003/Java-POS" target="_blank">☕ Java Simple POS 🛒</a></li>
+                    <li><a href="https://github.com/Tahha2003/ETL-Pipeline" target="_blank">🔄 ETL Pipeline 📊</a></li>
+
                 </ul>
             </div>
         </div>
     </section>
 
+    <!-- Contact -->
     <section class="contact" id="contact">
         <div class="contact-text">
-            <h2 style="color: white;">Contact <span>Me</span></h2>
-            <h4>Let's <span style="color: greenyellow;">Work</span> Together</h4>
+            <h2 class="sub-title" style="color: white;">Contact <span>Me</span></h2>
+            <h4>Let's <span style="color: #FFD700;">Work</span> Together</h4>
             <p>I'm always open to new opportunities and collaborations! Whether you have a question, a project idea, or
                 just want to connect, feel free to reach out using the form below — I'll get back to you as soon as I
                 can.</p><br>
-            <p style="color: greenyellow;">Looking
+            <p style="color: #FFD700;">"Looking
                 forward to hearing from you!"</p>
             <div class="contact-list">
-                <li><img width="20" height="20" src="https://img.icons8.com/emoji/50/e-mail.png" alt="e-mail"/><span style="color: white;"><a
-                            href="https://mail.google.com/mail/u/0/#inbox?compose=new"
-                            style="color: white;"> tahhaaleem@gmail.com</a></span><img width="20" height="20" src="https://img.icons8.com/color/48/phone.png" alt="phone"/><span style="color: white;"> +92 324 8215900</span>
+                <li><img width="20" height="20" src="https://img.icons8.com/emoji/50/e-mail.png" alt="e-mail" /><span
+                        style="color: white;"><a href="https://mail.google.com/mail/u/0/#inbox?compose=new"
+                            style="color: white;"> tahhaaleem@gmail.com</a></span><br><img width="20" height="20"
+                        src="https://img.icons8.com/color/48/phone.png" alt="phone" /><span style="color: white;"> +92
+                        324 8215900</span>
                 </li>
             </div>
             <div class="contact-icons">
-                <a href="https://www.facebook.com/mtahha.aleem" target="_blank"><img width="48" height="48" src="https://img.icons8.com/color/48/facebook.png" alt="facebook"/></a>
-                <a href="https://www.instagram.com/tahha_aleem/" target="_blank"><img width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"/></a>
-                <a href="https://wa.me/qr/UDTD4YZ3VEK3K1" target="_blank"><img width="48" height="48" src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="whatsapp--v1"/></a>
-                <a href="https://www.linkedin.com/in/rizwan-aleem-tahha-20a70b254/" target="_blank"><img width="48" height="48" src="https://img.icons8.com/color/48/linkedin.png" alt="linkedin"/></a>
-                <a href="https://github.com/Tahha2003" target="_blank"><img width="48" height="48" src="https://img.icons8.com/fluency/48/github.png" alt="github"/></a>
+                <a href="https://www.facebook.com/mtahha.aleem" target="_blank"><img width="48" height="48"
+                        src="https://img.icons8.com/color/48/facebook.png" alt="facebook" /></a>
+                <a href="https://www.instagram.com/tahha_aleem/" target="_blank"><img width="48" height="48"
+                        src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new" /></a>
+                <a href="https://wa.me/qr/UDTD4YZ3VEK3K1" target="_blank"><img width="48" height="48"
+                        src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="whatsapp--v1" /></a>
+                <a href="https://www.linkedin.com/in/rizwan-aleem-tahha-20a70b254/" target="_blank"><img width="48"
+                        height="48" src="https://img.icons8.com/color/48/linkedin.png" alt="linkedin" /></a>
+                <a href="https://github.com/Tahha2003" target="_blank"><img width="48" height="48"
+                        src="https://img.icons8.com/fluency/48/github.png" alt="github" /></a>
             </div>
         </div>
         <div class="contact-form">
@@ -269,14 +348,18 @@
         </div>
     </section>
 
-    <section class="last-line">
-        <p>&copy; 2024 - Portfolio by Rizwan Aleem Tahha | All Rights Reserved</p>
-    </section>
+    <!-- Footer -->
     <footer>
         <a href="#" class="top"><i class='bx bx-up-arrow-circle'></i></a>
     </footer>
+    <section class="last-line">
+        <p>&copy; 2024 - Portfolio by Rizwan Aleem Tahha | All Rights Reserved</p>
+    </section>
 
+    <button id="theme-toggle" class="theme-toggle">🌙</button>
+    <!-- Script -->
     <script src="main.js"></script>
+
 </body>
 
 </html>
